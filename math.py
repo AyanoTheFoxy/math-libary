@@ -84,6 +84,9 @@ class Pixels:
     def InToPx(In: float) -> float:
         px = In * 120
         return px
+    def MmToaPx(mm: float) -> float:
+        px = mm * 3.7795280352161
+        return px
     
 # time
 class time:
