@@ -21,7 +21,7 @@ class pos:
     def vect2d( x: int = 0, y: int = 0) -> int:
         return pos = [ x, y]
     
-    def vect3d( x: int = 0, y: int = 0) -> int:
+    def vect3d( x: int = 0, y: int = 0, z: int = 0) -> int:
         return pos = [ x, y]
     
     def lerp ( s0: int, s1: int, a: int = .5) -> int:
