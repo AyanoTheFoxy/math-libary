@@ -1,130 +1,100 @@
-# basic operations with numbers floats
-def Add(numb1: float, numb2: float) -> float:
-    return numb1 + numb2
+#operations
+class operations:
+    def root( r: float, i: float = 2, e: float = 1) -> float:
+        return r ** (e / i)
     
-def Sub(numb1: float, numb2: float) -> float:
-    return numb1 - numb2
+    def log( l: float, b: float = 2) -> float:
+        x = 0
+        while b ** x < l:
+            x += 0.1
+            if b ** x >= l:
+                return round( x, 2)
     
-def Mul(numb1: float, numb2: float) -> float:
-    return numb1 * numb2
-    
-def Div(numb1: float, numb2: float) -> float:
-    return numb1 / numb2
+    def Sqdeq( a: float, b: float, c: float) -> float:
+        d = b ** 2 - 4 * a * c
+        x1 = (-b - operations.root(d)) / (2 * a)
+        x2 = (-b + operations.root(d)) / (2 * a)
+        return x1, x2
 
-def Pot(base: float, exponent: float) -> float:
-    return base ** exponent
+#positions
+class pos:
+    def vect2d( x: int = 0, y: int = 0) -> int:
+        return pos = [ x, y]
     
-def Percent(percent: float, numb: float) -> float:
-    return round(percent % numb, 1)
+    def vect3d( x: int = 0, y: int = 0) -> int:
+        return pos = [ x, y]
     
-# opetrations complex with nembers floats
-def Root(rooting: float, index: float = 2) -> float:
-    return rooting ** (1 / index)
+    def lerp ( s0: int, s1: int, a: int = .5) -> int:
+        if a > 1:
+            a = 1
+        return s0 + (s1 - s0) * a
 
-def Log(log: float, base: float = 2) -> float:
-    x = 0
-    while base ** x < log:
-        x += 0.1
-        if base ** x >= log:
-            return round(x, 2)
+class area:
+    def square( x: int, y: int, w: int, h: int) -> int:
+        return area = [ x, y, w, h]
     
-def Sqdeq(a: float, b: float, c: float) -> float:
-    d = b ** 2 - 4 * a * c
-    x1 = (-b - Root(d)) / (2 * a)
-    x2 = (-b + Root(d)) / (2 * a)
-    return x1, x2
-
-# positions
-def Cmfr(r: int) -> int:
-    return round(2 * 3.14 * r, 0)
+    def triangle( x: int, y: int, w: int, h: int) -> int:
+        return area = [ x * 1.5, y * 2, w / 1.5, h / 2]
     
-def Lerp(s0: int, s1: int, alph: int) -> int:
-    if alph > 1:
-        alph = 1
-    return s0 + (s1 - s0) * alph
-
-def Vect2(x: int = 0, y: int = 0) -> int:
-        pos = [x, y]
-        return pos
-
-def Vect3(x: int = 0, y: int = 0, z: int = 0) -> int:
-        pos = [x, y, z]
-        return pos
-
-class Area:   
-    def Square(x: int, y: int, w: int, h: int) -> int:
-        area = [x, y, w, h]
-        return area
+    def cricle( x: int, y: int, w: int, h : int) -> int:
+        return area = [ x * 1.25, y * 1.25, w / 1.25, h / 1.25]
     
-    def Triangle(x: int, y: int, w: int, h: int) -> int:
-        w / 2
-        h / 2
-        x * 1.5
-        y * 2
-        area = [x, y, h, w]
-        return 
+    def cmfr(r: int) -> int:
+        return 2 * 3.14159265358979323846 * r
     
-    def Cricle(x: int, y: int, w: int, h : int) -> int:
-        w / 1.25 
-        h / 1.25
-        x * 1.25
-        y * 1.25
-        area = [x, y, h, w]
-        return area
+#conversion
+class conversions:
+    #pixels
+    class pixels:
+        def ptToPx(pt: float) -> float:
+        return pt * .75
     
-# conversion
-# pixels
-class Pixels:
-    def PtToPx(pt: float) -> float:
-        px = pt * .75
-        return px
-    def EmToPx(em: float) -> float:
-        px = em / 16
-        return px
-    def InToPx(In: float) -> float:
-        px = In * 120
-        return px
-    def MmToaPx(mm: float) -> float:
-        px = mm * 3.7795280352161
-        return px
+        def emToPx(em: float) -> float:
+            return em / 16
     
-# time
-class time:
-    def HToM(hour: float) -> float:
-        return hour * 60
+        def inToPx(In: float) -> float:
+            return In * 120
+    
+        def mmToaPx(mm: float) -> float:
+            return mm * 3.7795280352161
+    
+    #time
+    class time:
+        def mToM(h: float) -> float:
+            return hour * 60
         
-    def HToS(hour: float) -> float:
-        return hour * 3600
+        def hToS(h: float) -> float:
+            return h * 3600
         
-    def MToS(minute: float) -> float:
-        return minute * 60
+        def mToS(m: float) -> float:
+            return m * 60
         
-    def MToH(minute: float) -> float:
-        return minute / 60
+        def mToH(m: float) -> float:
+            return m / 60
         
-    def SToM(sec: float) -> float:
-        return sec / 60
+        def sToM(s: float) -> float:
+            return s / 60
         
-    def SToH(sec: float) -> float:
-        return sec / 3600
+        def sToH(s: float) -> float:
+            return s / 3600
         
-# temp
-class Temp:
-    def CToK(c: float) -> float:
-        return c + 273.15
-    
-    def CToF(c: float) -> float:
-        return (c * 9 / 5) + 32
-
-    def FToC(f: float) -> float:
-        return (f - 32) * 5 / 9
-    
-    def FToK(f: float) -> float:
-        return (f - 32) * 5 / 9 + 273.15
-   
-    def KToF(k: float) -> float:
-        return (k - 273.15) * 9 / 5 + 32
-    
-    def KToC(k: float) -> float:
-        return k - 273.15
-    
+    #temp
+    class Temp:
+        def cToK(c: float) -> float:
+            return c + 273.15
+        
+        def cToF(c: float) -> float:
+            return (c * 9 / 5) + 32
+        
+        def fToC(f: float) -> float:
+            return (f - 32) * 5 / 9
+        
+        def fToK(f: float) -> float:
+            return (f - 32) * 5 / 9 + 273.15
+       
+        def kToF(k: float) -> float:
+            return (k - 273.15) * 9 / 5 + 32
+        
+        def kToC(k: float) -> float:
+            return k - 273.15
+        
