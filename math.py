@@ -79,7 +79,7 @@ class conversions:
             return s / 3600
         
     #temp
-    class Temp:
+    class temp:
         def cToK(c: float) -> float:
             return c + 273.15
         
