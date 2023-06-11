@@ -19,9 +19,9 @@ player2Z = 2
 player2Pos = math.Vect3(player2X, player2Y, player2Z)
 
 # graphics
-px1 = math.Pixels.PtToPx(1)
-px2 = math.Pixels.EmToPx(1)
-px3 = math.Pixels.InToPx(1)
+px1 = math.PtToPx(1)
+px2 = math.EmToPx(1)
+px3 = math.InToPx(1)
 
 # blocks
 block = math.Area.Square(1, 1, 32, 32)
