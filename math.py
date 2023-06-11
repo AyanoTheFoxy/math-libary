@@ -13,7 +13,7 @@ class math:
     def Sqdeq( a: float, b: float, c: float) -> float:
         d = b ** 2 - 4 * a * c
         return (-b - math.root(d)) / (2 * a), (-b + math.root(d)) / (2 * a)
-    
+        
     def pi():
         return 3.14159265358979323846264338327950288419716939937510582097494459230781640
         
@@ -35,10 +35,10 @@ class math:
             return [ x, y, w, h]
     
         def triangle( x: int, y: int, w: int, h: int) -> int:
-            return x * 1.5, y * 2, w / 1.5, h / 2
+            return [ x * 1.5, y * 2, w / 1.5, h / 2]
     
         def cricle( x: int, y: int, w: int, h : int) -> int:
-            return x * 1.25, y * 1.25, w / 1.25, h / 1.25
+            return [ x * 1.25, y * 1.25, w / 1.25, h / 1.25]
     
     #conversion
     class conversions:
@@ -53,7 +53,7 @@ class math:
             return In * 120
     
         def mmToaPx(mm: float) -> float:
-           return mm * 3.7795280352161
+            return mm * 3.7795280352161
     
         #time
         def hToM(h: float) -> float:
